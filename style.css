@@ -1,0 +1,332 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.navbar {
+    display: inline-block;
+    background-color: #333;
+    position: relative;
+    z-index: 999;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.navbar li {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar li a {
+    font-size: 16px;
+    color: black;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #f8f8f8;
+}
+
+.navbar li a:hover {
+    background-color: #ddd;
+}
+
+.navbar ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: whitesmoke;
+    min-width: 200px;
+}
+
+.navbar ul ul li {
+    display: block;
+}
+
+.navbar li:hover > ul {
+    display: block;
+}
+
+.navbar ul ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #037d56;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.login-button a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.login-button a:active {
+    background-color: #00408a;
+    transform: scale(0.95);
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal:target {
+    display: block; /* Show modal when targeted */
+}
+
+.modal-content {
+    background-color: #f8f8f8;
+    margin: 15% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Responsive width */
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    width: 100%;
+    background-color: #d3c5c5;
+}
+
+.image-wrapper,
+.view-content {
+    box-sizing: border-box;
+}
+
+.image-fluid {
+    width: 100%; /* Full width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.view-content {
+    padding: 20px; /* Padding for content */
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center image if needed */
+}
+
+/* Image Gallery Section */
+#ImageGallery {
+    padding: 35px;
+    background-color: #f0f0f0; /* Light gray background for the gallery */
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 50px; /* Space between images */
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.image-item img {
+    width: 100%; /* Full width of container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+
+#arrange,
+#manage {
+    margin-left: 58px;
+    padding: 25px;
+    border-left: 4px solid red;
+}
+
+.image-item .text {
+    position: absolute;
+    bottom: 6%; /* Position text at the bottom */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-item:hover .text {
+    opacity: 1;
+}
+
+.mainn-content {
+    margin: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    width: 100%;
+    background-color: white;
+}
+
+.image-wrapper,
+.views-content {
+    box-sizing: border-box;
+}
+
+.views-content {
+    padding: 20px; /* Padding for content */
+}
+
+#sams {
+    font-size: 30px;
+    color: #6b6161;
+}
+
+#integrated {
+    height: auto;
+    width: 96%;
+    background-color: #ebe6e6;
+    margin-left: 0;
+    padding: 25px;
+    border-left: 4px solid red;
+}
+
+.ship{
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: none; /* Remove underline if any */
+}
+#integrated{
+    height: auto;
+    width:96%;
+
+    background-color:#ebe6e6;
+    margin-left: 16px;
+    padding: 16px;
+    border-left: 4px solid red;
+}
+#ims{
+    width:100vw;
+    background-size: auto;
+    background-position: center;
+
+}
